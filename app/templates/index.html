@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>GrandpyBot</title>
+        </head>
+        <body>
+            <header>
+                <h1>GrandPy Bot</h1>
+                <p class="head">👴</p>
+            </header>
+            <section>
+                <input id="input" type="text" name="question" placeholder="Pose ta question">
+                <button id="button" type="submit">Envoyer</button>
+                <div id="map"></div>
+            </section>
+            <footer>
+                <p class="foot">Copyright 2020 - Gonzalez Tony - Projet 7 -
+                    <a href="https://github.com/Tony380/Projet7" target="blank">GitHub</a>
+                </p>
+            </footer>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+        </body>
+    </html>
