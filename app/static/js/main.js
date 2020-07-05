@@ -5,7 +5,5 @@ const button = document.getElementById("button");
 button.addEventListener("click", function(){
     div = document.createElement("div");
     map.appendChild(div);
-    div.textContent = input;
+    div.textContent = input.value;
 });
-
-
