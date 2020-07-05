@@ -1,3 +1,5 @@
+"""Contains a list of words for parser"""
+
 STOP_WORDS = ['a', 'abord', 'absolument', 'adresse', 'afin', 'ah', 'ai', 'aie', 'ailleurs', 'ainsi', 'ait', 'allez',
               'allo', 'allons', 'alors', 'anterieur', 'anterieure', 'anterieures', 'apres', 'as', 'assez', 'attendu',
               'au', 'aucun', 'aucune', 'aujourd', "aujourd'hui", 'aupres', 'auquel', 'aura', 'auraient', 'aurait',
