@@ -18,7 +18,7 @@ class Parser:
                                  if unicodedata.category(word) != 'Mn'))
         # Remove punctuation and transform the question in a list of words
         self.question = re.sub(r'[^\w\s]', ' ', self.question).split()
-        # Isolate keywords in a new list
+        # Isolate keywords with list comprehension
         self.question = [word for word in self.question if word not in STOP_WORDS]
         # Transform the list into a string
         self.question = " ".join(self.question)
