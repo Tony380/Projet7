@@ -1,7 +1,7 @@
 """This file contains the user input parser"""
 import re
 import unicodedata
-from app.program.config import STOP_WORDS
+from app.program.stop_words import STOP_WORDS
 
 
 class Parser:
