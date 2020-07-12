@@ -10,7 +10,7 @@ class Parser:
     def __init__(self, question):
         self.question = question
 
-    def parse(self):
+    def parser(self):
         """ Parsing function """
         # Sets words in lowercase
         self.question = self.question.lower()
@@ -22,5 +22,5 @@ class Parser:
         # Isolates keywords
         self.question = [word for word in self.question if word not in STOP_WORDS]
         # Converts the list into a string
-        self.question = " ".join(self.question)
+        self.question = ' '.join(self.question)
         return self.question

@@ -14,7 +14,7 @@
             <section>
                 <input id="input" type="text" name="question" placeholder="Pose ta question">
                 <button id="button" type="submit">Envoyer</button>
-                <div id="map"></div>
+                <div id="container"></div>
             </section>
             <footer>
                 <p class="foot">Copyright 2020 - Gonzalez Tony - Projet 7 -
@@ -22,5 +22,8 @@
                 </p>
             </footer>
             <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key={{ config['API_KEY'] }}&callback=initMap">
+            </script>
         </body>
     </html>
