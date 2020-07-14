@@ -4,7 +4,6 @@ from config import API_KEY
 
 class Gmap:
 
-
     def __init__(self):
         self.key = '&key=' + API_KEY
         self.endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address='

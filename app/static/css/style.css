@@ -50,7 +50,7 @@ button{
     margin: 10px;
     border: 2px solid;
     height: 85%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 footer{
@@ -72,6 +72,27 @@ a{
 }
 
 #map{
-    width: 100%;
+    margin: 10px;
     height: 300px;
+    border: 1px solid;
 }
+
+#adress{
+    background-color: pink;
+    margin: 10px 10px 10px 100px;
+    border: 1px solid;
+}
+
+#wiki{
+    background-color: pink;
+    margin: 10px 10px 10px 100px;
+    border: 1px solid;
+}
+
+#input_value{
+    background-color: pink;
+    margin: 10px 100px 10px 10px;
+    border: 1px solid;
+}
+
+

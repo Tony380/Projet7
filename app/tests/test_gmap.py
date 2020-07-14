@@ -7,11 +7,11 @@ test = gmap.Gmap()
 response = {
     "results": [
         {
-            'formatted_address': "Rue de Rivoli, 75001 Paris, France",
+            'formatted_address': "fake_adress",
             'geometry': {
                 'location': {
-                    'lat': 48.8606111,
-                    'lng': 2.337644
+                    'lat': 5000,
+                    'lng': 5000
                 }
             }
         }
@@ -32,4 +32,4 @@ class TestApi:
 
         monkeypatch.setattr(gmap.requests, 'get', mockreturn)
         test.search(question)
-        assert test.location == {'adress': 'Rue de Rivoli, 75001 Paris, France', 'lat': 48.8606111, 'lng': 2.337644}
+        assert test.location == {'adress': 'fake_adress', 'lat': 5000, 'lng': 5000}

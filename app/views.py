@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app.program.parser import Parser
 from app.program.gmap import Gmap
+from app.program.wiki import Wiki
 from app import app
 
 app.config.from_object('config')
@@ -18,4 +19,7 @@ def get_response():
     response = question.parser()
     gmap = Gmap()
     gmap.search(response)
-    return gmap.location
+    wiki = Wiki()
+    wiki.search(response)
+    answer = {'coords': gmap.location, 'page': wiki.page, 'url': wiki.url}
+    return answer
