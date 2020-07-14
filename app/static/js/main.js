@@ -48,7 +48,6 @@ function display(){
     }
 }
 
-
 function papybot(){
     if (input.value == ""){
         var div = document.createElement("div");
