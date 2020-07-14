@@ -10,18 +10,22 @@ function papybot(){
 
     request.onload = function(){
         var answer = this.response;
+
         var div = document.createElement("div");
         var div1 = document.createElement("div");
         var div2 = document.createElement("div");
         var div3 = document.createElement("div");
+
         div.setAttribute("id", "input_value");
         div1.setAttribute("id", "adress");
         div2.setAttribute("id", "wiki");
         div3.setAttribute("id", "map");
+
         map.appendChild(div);
         map.appendChild(div1);
         map.appendChild(div2);
         map.appendChild(div3);
+
         div.innerHTML = input.value;
         div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['coords']['adress'];
 
