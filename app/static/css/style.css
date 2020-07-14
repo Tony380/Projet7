@@ -78,12 +78,14 @@ a{
 }
 
 #adress{
+    min-height: 20px;
     background-color: pink;
     margin: 10px 10px 10px 100px;
     border: 1px solid;
 }
 
 #wiki{
+    min-height: 20px;
     background-color: pink;
     margin: 10px 10px 10px 100px;
     border: 1px solid;
@@ -93,6 +95,7 @@ a{
     background-color: pink;
     margin: 10px 100px 10px 10px;
     border: 1px solid;
+    height: 20px;
 }
 
 

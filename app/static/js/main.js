@@ -2,9 +2,7 @@ var input = document.getElementById("input");
 var map = document.getElementById("container");
 var button = document.getElementById("button");
 
-
-button.addEventListener("click", function(){
-
+function papybot(){
     var request = new XMLHttpRequest();
     request.open("get", "/api?question=" + input.value);
     request.responseType = "json";
@@ -42,7 +40,17 @@ button.addEventListener("click", function(){
         div2.innerHTML = "Au fait, je ne t'ai pas raconté. " + answer['page'];
         div2.append(a);
         initMap(answer['coords']['lat'], answer['coords']['lng']);
+        input.value = '';
     }
+}
+
+button.addEventListener("click", function(){
+    papybot();
 });
 
+input.addEventListener('keyup', function(e) {
+    if (e.key == 'Enter') {
+        papybot();
+    }
+});
 
