@@ -2,7 +2,7 @@ var input = document.getElementById("input");
 var container = document.getElementById("container");
 var button = document.getElementById("button");
 
-function papybot(){
+function display(){
     var request = new XMLHttpRequest();
     request.open("get", "/api?question=" + input.value);
     request.responseType = "json";
@@ -45,6 +45,19 @@ function papybot(){
         div2.append(a);
         initMap(answer['coords']['lat'], answer['coords']['lng']);
         input.value = '';
+    }
+}
+
+
+function papybot(){
+    if (input.value == ""){
+        var div = document.createElement("div");
+        div.setAttribute("id", "adress");
+        container.appendChild(div);
+        div.innerHTML = "Tu n'as rien saisi";
+    }
+    else{
+        display();
     }
 }
 
