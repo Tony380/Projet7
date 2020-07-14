@@ -1,5 +1,5 @@
 var input = document.getElementById("input");
-var map = document.getElementById("container");
+var container = document.getElementById("container");
 var button = document.getElementById("button");
 
 function papybot(){
@@ -21,10 +21,10 @@ function papybot(){
         div2.setAttribute("id", "wiki");
         div3.setAttribute("id", "map");
 
-        map.appendChild(div);
-        map.appendChild(div1);
-        map.appendChild(div2);
-        map.appendChild(div3);
+        container.appendChild(div);
+        container.appendChild(div1);
+        container.appendChild(div2);
+        container.appendChild(div3);
 
         div.innerHTML = input.value;
         div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['coords']['adress'];
@@ -52,9 +52,8 @@ button.addEventListener("click", function(){
     papybot();
 });
 
-input.addEventListener('keyup', function(e) {
-    if (e.key == 'Enter') {
+input.addEventListener('keyup', function(event) {
+    if (event.key == 'Enter') {
         papybot();
     }
 });
-
