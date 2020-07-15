@@ -1,69 +1,61 @@
 body{
-    background-color: #7DA2C8;
+    background-color: #696969;
     border: 3px solid;
+    margin: 0px;
 }
 
 header{
-    height: 90px;
+    margin: 10px;
     background-color: #9D9FA1;
     text-align: center;
+    border: 2px solid;
 }
 
-.head{
-    font-size: 60px;
-    display: inline-block;
-    margin: auto;
-}
-
-h1{
-    margin: auto;
-    display: inline-block;
-    margin-top: 0px;
+footer{
+    margin: 0px 10px 10px 10px;
+    height: 52px;
+    text-align: center;
+    background-color: #9D9FA1;
+    font-size: 17px;
+    border: 2px solid;
 }
 
 section{
-    background-color: #9D9FA1;
-    margin-top: 2px;
-    padding: auto;
-    height: 500px;
+    background-color: #696969;
+    height: 475px;
 }
 
-input{
-    background-color: #9D9FA1;
-    font-size: 18px;
-    box-sizing: border-box;
-    width: 90%;
-    height: 50px;
-    margin: auto 10px;
+.zone{
+    height: 40px;
+    margin: 0px 10px;
 }
 
 button{
     background-color: #508AC5;
     font-size: 18px;
-    box-sizing: border-box;
-    width: 98px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
+    float: right;
+    position: relative;
+    border: 2px solid;
+}
+
+input{
+    background-color: #9D9FA1;
+    font-size: 18px;
+    height: 34px;
+    position: absolute;
+    min-width: 70%;
     margin-right: 10px;
+    border: 2px solid;
 }
 
 #container{
+    background-color: #9D9FA1;
     margin: 10px;
     border: 2px solid;
     height: 85%;
     overflow-y: auto;
-}
-
-footer{
-    margin-top: 2px;
-    height: 50px;
-    text-align: center;
-    background-color: #9D9FA1;
-    font-size: 17px;
-}
-
-.foot{
-    display: inline-block;
-    margin: 12px;
 }
 
 a{
@@ -76,25 +68,40 @@ a{
     border: 1px solid;
 }
 
-#adress{
-    min-height: 20px;
-    background-color: pink;
+#adress, #wiki{
+    background-color: #48D1CC;
     margin: 10px 10px 10px 100px;
     border: 1px solid;
-}
-
-#wiki{
-    min-height: 20px;
-    background-color: pink;
-    margin: 10px 10px 10px 100px;
-    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #input_value{
-    background-color: pink;
+    background-color: #00FA9A;
     margin: 10px 100px 10px 10px;
     border: 1px solid;
-    height: 20px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
+@media screen and (min-width: 250px) and (max-width: 600px){
 
+    header{
+        font-size: 10px;
+    }
+
+    footer{
+        font-size: 14px;
+    }
+
+    input{
+        font-size: 12px;
+        height: 30px;
+        width: 50%;
+    }
+    button{
+        font-size: 15px;
+        height: 36px;
+        width: 70px;
+    }
+}
