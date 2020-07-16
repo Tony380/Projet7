@@ -3,7 +3,7 @@ from app.program import gmap
 
 
 question = "louvre"
-test = gmap.Gmap()
+test = gmap.Gmap(question)
 response = {
     "results": [
         {
@@ -31,5 +31,5 @@ class TestApi:
             return TestApi()
 
         monkeypatch.setattr(gmap.requests, 'get', mockreturn)
-        test.search(question)
-        assert test.location == {'adress': 'fake_adress', 'lat': 5000, 'lng': 5000}
+        answer = test.search()
+        assert answer == {'adress': 'fake_adress', 'lat': 5000, 'lng': 5000}
