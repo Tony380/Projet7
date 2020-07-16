@@ -32,5 +32,4 @@ def get_response():
                   'lng': gmap['lng'],
                   'page': wiki['page'],
                   'url': wiki['url']}
-
         return answer
