@@ -15,11 +15,21 @@ def home():
 @app.route('/api')
 def get_response():
     user_text = request.args.get("question")
-    question = Parser(user_text)
-    response = question.parser()
-    gmap = Gmap()
-    gmap.search(response)
-    wiki = Wiki()
-    wiki.search(response)
-    answer = {'coords': gmap.location, 'page': wiki.page, 'url': wiki.url}
-    return answer
+
+    response = Parser(user_text).parser()
+
+    gmap = Gmap(response).search()
+
+    wiki = Wiki(response).search()
+
+    if gmap == 'no result found' or wiki == 'no result found':
+        return 'no result found'
+
+    else:
+        answer = {'adress': gmap['adress'],
+                  'lat': gmap['lat'],
+                  'lng': gmap['lng'],
+                  'page': wiki['page'],
+                  'url': wiki['url']}
+
+        return answer

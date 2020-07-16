@@ -27,7 +27,7 @@ function display(){
         container.appendChild(div3);
 
         div.innerHTML = input.value;
-        div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['coords']['adress'];
+        div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['adress'];
 
         var a = document.createElement('a');
         var link = document.createTextNode(" En savoir plus sur Wikipedia");
@@ -43,7 +43,7 @@ function display(){
 
         div2.innerHTML = "Au fait, je ne t'ai pas raconté. " + answer['page'];
         div2.append(a);
-        initMap(answer['coords']['lat'], answer['coords']['lng']);
+        initMap(answer['lat'], answer['lng']);
         input.value = '';
     }
 }
