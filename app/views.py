@@ -23,7 +23,8 @@ def get_response():
     wiki = Wiki(response).search()
 
     if gmap == 'no result found' or wiki == 'no result found':
-        return 'no result found'
+        answer = {'result': 'no result found'}
+        return answer
 
     else:
         answer = {'adress': gmap['adress'],
