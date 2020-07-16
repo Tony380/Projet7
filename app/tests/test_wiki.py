@@ -20,7 +20,7 @@ class TestWiki:
 
         monkeypatch.setattr(wiki.wikipedia, 'summary', mock_summary)
         monkeypatch.setattr(wiki.wikipedia, 'page', mock_page)
-        test = wiki.Wiki()
-        test.search(question)
-        assert test.page == 'Le musée du Louvre etc...'
-        assert test.url == 'fake_url'
+        test = wiki.Wiki(question)
+        answer = test.search()
+        assert answer == {'page': 'Le musée du Louvre etc...', 'url': 'fake_url'}
+
