@@ -2,69 +2,81 @@ var input = document.getElementById("input");
 var container = document.getElementById("container");
 var button = document.getElementById("button");
 
-function display(){
-    var request = new XMLHttpRequest();
-    request.open("get", "/api?question=" + input.value);
-    request.responseType = "json";
-    request.send();
 
-    request.onload = function(){
-        var answer = this.response;
-        if (Object.keys(answer).length > 1){
-            var div = document.createElement("div");
-            var div1 = document.createElement("div");
-            var div2 = document.createElement("div");
-            var div3 = document.createElement("div");
+function displayInputValue(){
+    var div = document.createElement("div");
+    div.setAttribute("id", "input_value");
+    container.appendChild(div);
+    div.innerHTML = input.value;
+    input.value = '';
+}
 
-            div.setAttribute("id", "input_value");
-            div1.setAttribute("id", "adress");
-            div2.setAttribute("id", "wiki");
-            div3.setAttribute("id", "map");
+function displayAdress(answer){
+    var div1 = document.createElement("div");
+    div1.setAttribute("id", "adress");
+    container.appendChild(div1);
+    div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['adress'];
+}
 
-            container.appendChild(div);
-            container.appendChild(div1);
-            container.appendChild(div2);
-            container.appendChild(div3);
+function messageError(){
+    var div = document.createElement("div");
+    div.setAttribute("id", "adress");
+    container.appendChild(div);
+    div.innerHTML = "Je n'ai rien trouvé à ce sujet";
+}
 
-            div.innerHTML = input.value;
-            div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['adress'];
+function displayMessage(answer){
+    var div2 = document.createElement("div");
+    div2.setAttribute("id", "wiki");
+    container.appendChild(div2);
+    div2.innerHTML = "Au fait, je ne t'ai pas raconté. " + answer['page'];
 
-            var a = document.createElement('a');
-            var link = document.createTextNode(" En savoir plus sur Wikipedia");
-            a.appendChild(link);
-            a.title = " En savoir plus sur Wikipedia";
-            a.href = answer['url'];
+    var a = document.createElement('a');
+    var link = document.createTextNode(" En savoir plus sur Wikipedia");
+    a.appendChild(link);
+    a.title = " En savoir plus sur Wikipedia";
+    a.href = answer['url'];
+    div2.append(a);
+}
 
-            function initMap(lat, lng){
-            var place = {lat: lat, lng: lng};
-            var map = new google.maps.Map(div3, {zoom: 10, center: place});
-            var marker = new google.maps.Marker({position: place, map: map});
-            }
-
-            div2.innerHTML = "Au fait, je ne t'ai pas raconté. " + answer['page'];
-            div2.append(a);
-            initMap(answer['lat'], answer['lng']);
-            input.value = '';
-        }
-        else{
-            var div = document.createElement("div");
-            div.setAttribute("id", "adress");
-            container.appendChild(div);
-            div.innerHTML = "Je ne me souviens plus très bien. Tu peux préciser?";
-            input.value = '';
-        }
-    }
+function emptyInput(){
+    var div = document.createElement("div");
+    div.setAttribute("id", "adress");
+    container.appendChild(div);
+    div.innerHTML = "Tu n'as rien saisi";
 }
 
 function papybot(){
     if (input.value == ""){
-        var div = document.createElement("div");
-        div.setAttribute("id", "adress");
-        container.appendChild(div);
-        div.innerHTML = "Tu n'as rien saisi";
+        displayInputValue();
+        emptyInput();
     }
     else{
-        display();
+        var request = new XMLHttpRequest();
+        request.open("get", "/api?question=" + input.value);
+        request.responseType = "json";
+        request.send();
+        request.onload = function(){
+            var answer = this.response;
+            if (Object.keys(answer).length > 1){
+                displayInputValue();
+                displayAdress(answer);
+                displayMessage(answer);
+                function initMap(lat, lng){
+                    var div3 = document.createElement("div");
+                    div3.setAttribute("id", "map");
+                    container.appendChild(div3);
+                    var place = {lat: lat, lng: lng};
+                    var map = new google.maps.Map(div3, {zoom: 10, center: place});
+                    var marker = new google.maps.Marker({position: place, map: map});
+                }
+                initMap(answer['lat'], answer['lng']);
+            }
+            else{
+                displayInputValue();
+                messageError();
+            }
+        }
     }
 }
 
