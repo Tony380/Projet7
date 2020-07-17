@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, jsonify
 from app.program.parser import Parser
 from app.program.gmap import Gmap
 from app.program.wiki import Wiki
@@ -20,16 +20,22 @@ def get_response():
 
     gmap = Gmap(response).search()
 
-    wiki = Wiki(response, gmap['lat'], gmap['lng']).search()
-
-    if gmap == 'no result found' or wiki == 'no result found':
+    if gmap == 'no result found':
         answer = {'result': 'no result found'}
-        return answer
+        return jsonify(answer)
 
     else:
-        answer = {'adress': gmap['adress'],
-                  'lat': gmap['lat'],
-                  'lng': gmap['lng'],
-                  'page': wiki['page'],
-                  'url': wiki['url']}
-        return answer
+        wiki = Wiki(response, gmap['lat'], gmap['lng']).search()
+
+        if wiki == 'no result found':
+            answer = {'result': 'no result found'}
+            return jsonify(answer)
+
+        else:
+            answer = {'adress': gmap['adress'],
+                      'lat': gmap['lat'],
+                      'lng': gmap['lng'],
+                      'page': wiki['page'],
+                      'url': wiki['url']}
+
+            return jsonify(answer)
