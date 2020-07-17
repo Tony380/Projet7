@@ -31,6 +31,9 @@ class Wiki:
         except wikipedia.exceptions.DisambiguationError:
             return "no result found"
 
+        except wikipedia.exceptions.WikipediaException:
+            return 'no result found'
+
         except IndexError:
             return "no result found"
 
