@@ -15,21 +15,21 @@ function displayAdress(answer){
     var div1 = document.createElement("div");
     div1.setAttribute("id", "adress");
     container.appendChild(div1);
-    div1.innerHTML = "Bien sûr mon poussin, voici l'adresse : " + answer['adress'];
+    div1.innerHTML = "Ah oui! Je connais bien, voici l'adresse : " + answer['adress'];
 }
 
 function messageError(){
     var div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
-    div.innerHTML = "Je n'ai rien trouvé à ce sujet";
+    div.innerHTML = "Je n'ai rien trouvé à ce sujet, peux tu préciser?";
 }
 
 function displayMessage(answer){
     var div2 = document.createElement("div");
     div2.setAttribute("id", "wiki");
     container.appendChild(div2);
-    div2.innerHTML = "Au fait, je ne t'ai pas raconté. " + answer['page'];
+    div2.innerHTML = "D'ailleurs, je ne t'ai pas raconté... " + answer['page'];
 
     var a = document.createElement('a');
     var link = document.createTextNode(" En savoir plus sur Wikipedia");
@@ -43,7 +43,7 @@ function emptyInput(){
     var div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
-    div.innerHTML = "Tu n'as rien saisi";
+    div.innerHTML = "Tu n'as rien saisi...";
 }
 
 function papybot(){
