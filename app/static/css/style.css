@@ -77,11 +77,12 @@ a{
 }
 
 #input_value{
+    overflow-wrap: break-word;
     background-color: #00FA9A;
     margin: 10px 100px 10px 10px;
     border: 1px solid;
     border-radius: 5px;
-    height: 18px;
+    min-height: 18px;
     padding: 5px;
 }
 
