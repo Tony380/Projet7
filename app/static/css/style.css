@@ -36,18 +36,23 @@ button{
     width: 100px;
     height: 40px;
     float: right;
-    position: relative;
     border: 2px solid;
+}
+
+span{
+    background-color: blue;
+    height: 36px;
+    width: 40px;
+    border: 2px solid;
+    float: right;
 }
 
 input{
     background-color: #9D9FA1;
     font-size: 18px;
     height: 34px;
-    position: absolute;
-    min-width: 70%;
-    margin-right: 10px;
     border: 2px solid;
+    width: 70%;
 }
 
 #container{
@@ -86,24 +91,46 @@ a{
     padding: 5px;
 }
 
-@media screen and (min-width: 250px) and (max-width: 600px){
+@media screen and (min-width: 450px) and (max-width: 600px){
 
     header{
-        font-size: 10px;
+        font-size: 12px;
+    }
+
+    input{
+        font-size: 15px;
+        height: 34px;
+    }
+
+    button{
+        font-size: 15px;
+        height: 40px;
+        width: 70px;
+    }
+}
+@media screen and (min-width: 285px) and (max-width: 450px){
+    header{
+        font-size: 8px;
     }
 
     footer{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     input{
         font-size: 12px;
         height: 30px;
-        width: 50%;
+        width: 60%;
     }
+
+    span{
+        height: 32px;
+        width:
+    }
+
     button{
-        font-size: 15px;
+        font-size: 10px;
         height: 36px;
-        width: 70px;
+        width: 50px;
     }
 }
