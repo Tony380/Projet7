@@ -20,7 +20,7 @@ def get_response():
 
     gmap = Gmap(response).search()
 
-    wiki = Wiki(response).search()
+    wiki = Wiki(response, gmap['lat'], gmap['lng']).search()
 
     if gmap == 'no result found' or wiki == 'no result found':
         answer = {'result': 'no result found'}

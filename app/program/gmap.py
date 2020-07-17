@@ -21,3 +21,6 @@ class Gmap:
 
         except IndexError:
             return 'no result found'
+
+        except KeyError:
+            return 'no result found'
