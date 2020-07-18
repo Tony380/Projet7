@@ -84,11 +84,11 @@ const papybot = () => {
     }
 }
 
-button.addEventListener("click", function(){
+button.addEventListener("click", () => {
     papybot();
 });
 
-input.addEventListener('keyup', function(event) {
+input.addEventListener('keyup', (event) => {
     if (event.key == 'Enter') {
         papybot();
     }
