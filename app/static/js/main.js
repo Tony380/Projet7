@@ -1,6 +1,7 @@
 var input = document.getElementById("input");
 var container = document.getElementById("container");
 var button = document.getElementById("button");
+var spinner = document.getElementById('spinner');
 
 
 function displayInputValue(){
@@ -52,9 +53,8 @@ function papybot(){
         emptyInput();
     }
     else{
-        var spinner = document.getElementById('img');
-        spinner.style.display = 'block';
         var request = new XMLHttpRequest();
+        spinner.style.display = 'block';
         request.open("get", "/api?question=" + input.value);
         request.responseType = "json";
         request.send();

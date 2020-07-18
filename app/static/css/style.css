@@ -39,7 +39,7 @@ button{
     border: 2px solid;
 }
 
-img{
+#spinner{
     height: 38px;
     width: 38px;
     border: 2px solid;
@@ -125,7 +125,7 @@ a{
         width: 60%;
     }
 
-    img{
+    #img{
         height: 30px;
         width: 30px
     }
