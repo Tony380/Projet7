@@ -3,7 +3,6 @@ const container = document.getElementById("container");
 const button = document.getElementById("button");
 const spinner = document.getElementById('spinner');
 
-
 const displayInputValue = () => {
     let div = document.createElement("div");
     div.setAttribute("id", "input_value");
@@ -41,6 +40,15 @@ const displayWiki = (answer) => {
     div2.append(a);
 }
 
+const initMap = (lat, lng) => {
+    let div3 = document.createElement("div");
+    div3.setAttribute("id", "map");
+    container.appendChild(div3);
+    let place = {lat: lat, lng: lng};
+    let map = new google.maps.Map(div3, {zoom: 10, center: place});
+    let marker = new google.maps.Marker({position: place, map: map});
+}
+
 const emptyInput = () => {
     let div = document.createElement("div");
     div.setAttribute("id", "adress");
@@ -66,14 +74,6 @@ const papybot = () => {
                 displayInputValue();
                 displayAdress(answer);
                 displayWiki(answer);
-                const initMap = (lat, lng) => {
-                    let div3 = document.createElement("div");
-                    div3.setAttribute("id", "map");
-                    container.appendChild(div3);
-                    let place = {lat: lat, lng: lng};
-                    let map = new google.maps.Map(div3, {zoom: 10, center: place});
-                    let marker = new google.maps.Marker({position: place, map: map});
-                }
                 initMap(answer['lat'], answer['lng']);
             }
             else{
