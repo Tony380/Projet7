@@ -10,7 +10,6 @@ content = 'Le musée du Louvre etc...'
 class TestWiki:
     url = 'fake_url'
 
-
     def test_wiki(self, monkeypatch):
 
         def mock_summary(question, sentences):
@@ -18,7 +17,6 @@ class TestWiki:
 
         def mock_page(question):
             return TestWiki()
-
 
         monkeypatch.setattr(wiki.wikipedia, 'summary', mock_summary)
         monkeypatch.setattr(wiki.wikipedia, 'page', mock_page)
