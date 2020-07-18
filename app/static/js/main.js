@@ -1,4 +1,5 @@
 const input = document.getElementById("input");
+input.focus();
 const container = document.getElementById("container");
 const button = document.getElementById("button");
 const spinner = document.getElementById('spinner');
