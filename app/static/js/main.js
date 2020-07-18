@@ -52,11 +52,14 @@ function papybot(){
         emptyInput();
     }
     else{
+        var spinner = document.getElementById('img');
+        spinner.style.display = 'block';
         var request = new XMLHttpRequest();
         request.open("get", "/api?question=" + input.value);
         request.responseType = "json";
         request.send();
         request.onload = function(){
+            spinner.style.display = 'none';
             var answer = this.response;
             if (Object.keys(answer).length > 1){
                 displayInputValue();
