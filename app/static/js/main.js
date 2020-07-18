@@ -66,7 +66,7 @@ const papybot = () => {
                 displayInputValue();
                 displayAdress(answer);
                 displayWiki(answer);
-                function initMap(lat, lng){
+                const initMap = (lat, lng) => {
                     let div3 = document.createElement("div");
                     div3.setAttribute("id", "map");
                     container.appendChild(div3);
