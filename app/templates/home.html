@@ -24,8 +24,6 @@
                 </p>
             </footer>
             <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key={{ config['API_KEY'] }}&callback=initMap">
-            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config['API_KEY'] }}"></script>
         </body>
     </html>
