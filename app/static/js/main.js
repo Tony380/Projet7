@@ -1,11 +1,11 @@
-var input = document.getElementById("input");
-var container = document.getElementById("container");
-var button = document.getElementById("button");
-var spinner = document.getElementById('spinner');
+const input = document.getElementById("input");
+const container = document.getElementById("container");
+const button = document.getElementById("button");
+const spinner = document.getElementById('spinner');
 
 
 function displayInputValue(){
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     div.setAttribute("id", "input_value");
     container.appendChild(div);
     div.innerHTML = input.value;
@@ -14,27 +14,27 @@ function displayInputValue(){
 }
 
 function displayAdress(answer){
-    var div1 = document.createElement("div");
+    let div1 = document.createElement("div");
     div1.setAttribute("id", "adress");
     container.appendChild(div1);
     div1.innerHTML = "Ah oui! Je connais bien, voici l'adresse : " + answer['adress'];
 }
 
 function messageError(){
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
     div.innerHTML = "Je n'ai rien trouvé à ce sujet, peux tu préciser?";
 }
 
 function displayWiki(answer){
-    var div2 = document.createElement("div");
+    let div2 = document.createElement("div");
     div2.setAttribute("id", "wiki");
     container.appendChild(div2);
     div2.innerHTML = "D'ailleurs, je ne t'ai pas raconté... " + answer['page'];
 
-    var a = document.createElement('a');
-    var link = document.createTextNode(" En savoir plus sur Wikipedia");
+    let a = document.createElement('a');
+    let link = document.createTextNode(" En savoir plus sur Wikipedia");
     a.appendChild(link);
     a.title = " En savoir plus sur Wikipedia";
     a.href = answer['url'];
@@ -42,7 +42,7 @@ function displayWiki(answer){
 }
 
 function emptyInput(){
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
     div.innerHTML = "Tu n'as rien saisi...";
@@ -54,25 +54,25 @@ function papybot(){
         emptyInput();
     }
     else{
-        var request = new XMLHttpRequest();
+        let request = new XMLHttpRequest();
         spinner.style.display = 'block';
         request.open("get", "/api?question=" + input.value);
         request.responseType = "json";
         request.send();
         request.onload = function(){
             spinner.style.display = 'none';
-            var answer = this.response;
+            let answer = this.response;
             if (Object.keys(answer).length > 1){
                 displayInputValue();
                 displayAdress(answer);
                 displayWiki(answer);
                 function initMap(lat, lng){
-                    var div3 = document.createElement("div");
+                    let div3 = document.createElement("div");
                     div3.setAttribute("id", "map");
                     container.appendChild(div3);
-                    var place = {lat: lat, lng: lng};
-                    var map = new google.maps.Map(div3, {zoom: 10, center: place});
-                    var marker = new google.maps.Marker({position: place, map: map});
+                    let place = {lat: lat, lng: lng};
+                    let map = new google.maps.Map(div3, {zoom: 10, center: place});
+                    let marker = new google.maps.Marker({position: place, map: map});
                 }
                 initMap(answer['lat'], answer['lng']);
             }
