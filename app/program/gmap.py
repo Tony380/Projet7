@@ -1,3 +1,4 @@
+"""This class uses google's API to fetch coordinates and adress from a place"""
 import requests
 from config import API_KEY
 
@@ -11,6 +12,7 @@ class Gmap:
         self.key = API_KEY
 
     def search(self):
+        """Search coordinates and adress"""
         try:
             r = requests.get(self.endpoint + self.question + self.location + self.key)
             result = r.json()
