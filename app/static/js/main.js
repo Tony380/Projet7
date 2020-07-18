@@ -26,7 +26,7 @@ function messageError(){
     div.innerHTML = "Je n'ai rien trouvé à ce sujet, peux tu préciser?";
 }
 
-function displayMessage(answer){
+function displayWiki(answer){
     var div2 = document.createElement("div");
     div2.setAttribute("id", "wiki");
     container.appendChild(div2);
@@ -64,7 +64,7 @@ function papybot(){
             if (Object.keys(answer).length > 1){
                 displayInputValue();
                 displayAdress(answer);
-                displayMessage(answer);
+                displayWiki(answer);
                 function initMap(lat, lng){
                     var div3 = document.createElement("div");
                     div3.setAttribute("id", "map");
