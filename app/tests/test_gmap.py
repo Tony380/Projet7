@@ -1,7 +1,6 @@
 """This file contains the Google Maps api test"""
 from app.program import gmap
 
-
 question = "louvre"
 test = gmap.Gmap(question)
 response = {
