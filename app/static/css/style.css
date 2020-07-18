@@ -55,6 +55,7 @@ input{
     height: 34px;
     border: 2px solid;
     width: 70%;
+    outline: none;
 }
 
 #container{
