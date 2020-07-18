@@ -10,6 +10,7 @@ function displayInputValue(){
     container.appendChild(div);
     div.innerHTML = input.value;
     input.value = '';
+    setTimeout(function(){ div.scrollIntoView(); }, 100);
 }
 
 function displayAdress(answer){
