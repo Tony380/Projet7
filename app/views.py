@@ -1,9 +1,11 @@
+"""Views file will send answer to front-end"""
 from flask import render_template, request, jsonify
 from app.program.parser import Parser
 from app.program.gmap import Gmap
 from app.program.wiki import Wiki
 from app import app
 
+# for API key
 app.config.from_object('config')
 
 
@@ -14,6 +16,7 @@ def home():
 
 @app.route('/api')
 def get_response():
+    """Response to front-end"""
     user_text = request.args.get("question")
 
     response = Parser(user_text).parser()
