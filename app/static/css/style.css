@@ -85,13 +85,13 @@ a{
 }
 
 #input_value{
-    overflow-wrap: break-word;
     background-color: #00FA9A;
     margin: 10px 10px 10px 200px;
     border: 1px solid;
     border-radius: 5px;
     min-height: 18px;
     padding: 5px;
+    overflow-wrap: break-word;
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px){
