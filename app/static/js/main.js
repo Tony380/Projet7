@@ -4,7 +4,7 @@ const button = document.getElementById("button");
 const spinner = document.getElementById('spinner');
 
 
-function displayInputValue(){
+const displayInputValue = () => {
     let div = document.createElement("div");
     div.setAttribute("id", "input_value");
     container.appendChild(div);
@@ -13,21 +13,21 @@ function displayInputValue(){
     setTimeout(function(){ div.scrollIntoView(); }, 100);
 }
 
-function displayAdress(answer){
+const displayAdress = (answer) => {
     let div1 = document.createElement("div");
     div1.setAttribute("id", "adress");
     container.appendChild(div1);
     div1.innerHTML = "Ah oui! Je connais bien, voici l'adresse : " + answer['adress'];
 }
 
-function messageError(){
+const messageError = () => {
     let div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
     div.innerHTML = "Je n'ai rien trouvé à ce sujet, peux tu préciser?";
 }
 
-function displayWiki(answer){
+const displayWiki = (answer) => {
     let div2 = document.createElement("div");
     div2.setAttribute("id", "wiki");
     container.appendChild(div2);
@@ -41,14 +41,14 @@ function displayWiki(answer){
     div2.append(a);
 }
 
-function emptyInput(){
+const emptyInput = () => {
     let div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
     div.innerHTML = "Tu n'as rien saisi...";
 }
 
-function papybot(){
+const papybot = () => {
     if (input.value == ""){
         displayInputValue();
         emptyInput();
