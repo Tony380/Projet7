@@ -1,13 +1,11 @@
 body{
     background-color: #008080;
-    border: 3px solid;
     margin: 0px;
 }
 
 header{
     margin: 10px;
-    background-color: #2F4F4F;
-    color: white;
+    color: #DCDCDC;
     text-align: center;
 }
 
@@ -15,14 +13,12 @@ footer{
     margin: 0px 10px 10px 10px;
     height: 52px;
     text-align: center;
-    background-color: #2F4F4F;
-    color: white;
+    color: #DCDCDC;
     font-size: 17px;
     font-weight: bold;
 }
 
 section{
-    background-color: #008080;
     height: 475px;
 }
 
@@ -32,11 +28,12 @@ section{
 }
 
 button{
-    background-color: #508AC5;
+    background-color: #6495ED;
     font-size: 18px;
     width: 100px;
     height: 40px;
     float: right;
+    outline: none;
 }
 
 #spinner{
@@ -49,7 +46,7 @@ button{
 }
 
 input{
-    background-color: #8FBC8F;
+    background-color: #DCDCDC;
     font-size: 18px;
     height: 34px;
     width: 70%;
@@ -57,9 +54,8 @@ input{
 }
 
 #container{
-    background-color: #DCDCDC;
     margin: 10px;
-    height: 85%;
+    height: 86%;
     overflow-y: auto;
 }
 
@@ -68,7 +64,7 @@ a{
 }
 
 #href{
-    color: white;
+    color: #6495ED
 }
 
 #map{
@@ -94,7 +90,7 @@ a{
 }
 
 header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
-    border: 1px solid;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
