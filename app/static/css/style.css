@@ -10,7 +10,7 @@ header{
 }
 
 footer{
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px;
     height: 52px;
     text-align: center;
     color: #DCDCDC;
@@ -127,8 +127,9 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     }
 
     footer{
-        margin-top: 45px;
+        margin-top: 40px;
         font-size: 14px;
+        padding-top: 7px;
     }
 
     input{
