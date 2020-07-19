@@ -1,7 +1,6 @@
 /* Main JavaScript file */
 
 const input = document.getElementById("input");
-input.focus();
 const container = document.getElementById("container");
 const button = document.getElementById("button");
 const spinner = document.getElementById('spinner');
@@ -68,7 +67,6 @@ const emptyInput = () => {
 
 const papybot = () => {
     /* Main function for displaying answers */
-
     if (input.value == ""){
         displayInputValue();
         emptyInput();
@@ -76,6 +74,10 @@ const papybot = () => {
     else{
         let request = new XMLHttpRequest();
         spinner.style.display = 'block';
+
+        /* Escaping special chars for Xss security */
+        input.value = input.value.replace(/<|>|#|&/g, "");
+
         request.open("get", "/api?question=" + input.value);
         request.responseType = "json";
         request.send();
