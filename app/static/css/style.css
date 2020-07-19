@@ -100,6 +100,10 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
         font-size: 12px;
     }
 
+    footer{
+        margin-top: 30px;
+    }
+
     input{
         font-size: 15px;
         height: 34px;
@@ -110,14 +114,21 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
         height: 40px;
         width: 70px;
     }
+
+    #container{
+        height: 92%;
+    }
 }
+
 @media screen and (min-width: 285px) and (max-width: 450px){
     header{
-        font-size: 8px;
+        font-size: 7px;
+        padding: 5px;
     }
 
     footer{
-        font-size: 12px;
+        margin-top: 45px;
+        font-size: 14px;
     }
 
     input{
@@ -135,5 +146,9 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
         font-size: 10px;
         height: 36px;
         width: 50px;
+    }
+
+    #container{
+        height: 95%;
     }
 }
