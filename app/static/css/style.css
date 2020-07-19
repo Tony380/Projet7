@@ -81,7 +81,6 @@ a{
     background-color: #48D1CC;
     margin: 10px;
     border: 1px solid;
-    border-radius: 5px;
     padding: 5px;
 }
 
@@ -90,11 +89,14 @@ a{
     background-color: #00FA9A;
     margin: 10px;
     border: 1px solid;
-    border-radius: 5px;
     min-height: 18px;
     min-width: 20px;
     padding: 5px;
     overflow-wrap: break-word;
+}
+
+header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px){
