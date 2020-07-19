@@ -77,19 +77,22 @@ a{
 }
 
 #adress, #wiki{
+    display: table;
     background-color: #48D1CC;
-    margin: 10px 200px 10px 10px;
+    margin: 10px;
     border: 1px solid;
     border-radius: 5px;
     padding: 5px;
 }
 
 #input_value{
+    display: table;
     background-color: #00FA9A;
-    margin: 10px 10px 10px 200px;
+    margin: 10px;
     border: 1px solid;
     border-radius: 5px;
     min-height: 18px;
+    min-width: 20px;
     padding: 5px;
     overflow-wrap: break-word;
 }
