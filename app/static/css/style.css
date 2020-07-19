@@ -80,6 +80,7 @@ a{
 }
 
 #wiki{
+    display: table;
     background-color: #48D1CC;
     margin: 10px;
     padding: 5px;
