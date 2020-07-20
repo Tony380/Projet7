@@ -128,10 +128,10 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     }
 }
 
-@media screen and (min-width: 285px) and (max-width: 450px){
+@media screen and (min-width: 300px) and (max-width: 450px){
     header{
-        font-size: 7px;
-        padding: 5px;
+        font-size: 8px;
+        padding: 0px;
     }
 
     footer{
