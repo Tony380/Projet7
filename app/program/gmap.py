@@ -4,7 +4,7 @@ from config import API_KEY
 
 
 class Gmap:
-    """This class uses google's API to fetch coordinates and adress from a place"""
+    """Uses google's API to fetch coordinates and adress from a place"""
     def __init__(self, question):
         self.question = question
         self.endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address='
