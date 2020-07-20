@@ -13,7 +13,7 @@ class Wiki:
         wikipedia.set_lang('fr')
 
     def search(self):
-        """Return first 2 sentences of the wikipedia article and the page's url"""
+        """Return first 2 sentences of the wikipedia article and page's url"""
         try:
             wiki = wikipedia.geosearch(self.lat, self.lng, self.question)
             if not wiki:
