@@ -3,6 +3,7 @@ from flask import render_template, request, jsonify
 from app.program.parser import Parser
 from app.program.gmap import Gmap
 from app.program.wiki import Wiki
+from app.program.sentences import sentence
 from app import app
 
 # for API key
@@ -23,15 +24,20 @@ def get_response():
 
     gmap = Gmap(response).search()
 
+    # random sentences
+    sentences = sentence()
+
     if gmap == 'no result found':
-        answer = {'result': 'no result found'}
+        answer = {'result': 'no result found',
+                  'res': sentences['res']}
         return jsonify(answer)
 
     else:
         wiki = Wiki(response, gmap['lat'], gmap['lng']).search()
 
         if wiki == 'no result found':
-            answer = {'result': 'no result found'}
+            answer = {'result': 'no result found',
+                      'res': sentences['res']}
             return jsonify(answer)
 
         else:
@@ -39,6 +45,8 @@ def get_response():
                       'lat': gmap['lat'],
                       'lng': gmap['lng'],
                       'page': wiki['page'],
-                      'url': wiki['url']}
+                      'url': wiki['url'],
+                      'adr': sentences['adr'],
+                      'wik': sentences['wik']}
 
             return jsonify(answer)

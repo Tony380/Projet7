@@ -20,15 +20,15 @@ const displayAdress = (answer) => {
     let div1 = document.createElement("div");
     div1.setAttribute("id", "adress");
     container.appendChild(div1);
-    div1.innerHTML = "Ah oui! Je connais bien, voici l'adresse : " + answer['adress'];
+    div1.innerHTML = answer['adr'] + answer['adress'];
 }
 
-const messageError = () => {
+const messageError = (answer) => {
     /* Displayed if no answers are found */
     let div = document.createElement("div");
     div.setAttribute("id", "adress");
     container.appendChild(div);
-    div.innerHTML = "Je n'ai rien trouvé à ce sujet, peux tu préciser?";
+    div.innerHTML = answer['res'];
 }
 
 const displayWiki = (answer) => {
@@ -36,7 +36,7 @@ const displayWiki = (answer) => {
     let div2 = document.createElement("div");
     div2.setAttribute("id", "wiki");
     container.appendChild(div2);
-    div2.innerHTML = "D'ailleurs, je ne t'ai pas raconté... " + answer['page'];
+    div2.innerHTML = answer['wik'] + answer['page'];
 
     /* Display url attached to Wikipedia article */
     let a = document.createElement('a');
@@ -85,7 +85,7 @@ const papybot = () => {
             spinner.style.display = 'none';
             let answer = this.response;
 
-            if (Object.keys(answer).length > 1){
+            if (Object.keys(answer).length > 2){
                 displayInputValue();
                 displayAdress(answer);
                 displayWiki(answer);
@@ -93,7 +93,7 @@ const papybot = () => {
             }
             else{
                 displayInputValue();
-                messageError();
+                messageError(answer);
             }
         }
     }
