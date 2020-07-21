@@ -58,7 +58,7 @@ button{
     width: 38px;
     border-radius: 45px;
     float: right;
-    display: none;
+
     margin-right: 5px;
 }
 
@@ -103,4 +103,63 @@ a{
 header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     border: 1px solid black;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 560px){
+    header{
+        font-size: 10px;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+
+    input{
+        font-size: 15px;
+        height: 34px;
+        width: 63%;
+    }
+
+    button{
+        font-size: 15px;
+        height: 40px;
+        width: 70px;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 360px){
+    header{
+        font-size: 7px;
+        padding: 5px 0px;
+        margin: 2px;
+    }
+
+    footer{
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    input{
+        font-size: 12px;
+        width: 60%;
+    }
+
+    #spinner{
+        height: 30px;
+        width: 30px
+    }
+
+    button{
+        font-size: 10px;
+        height: 38px;
+        width: 50px;
+    }
+
+    #container{
+        margin: 2px;
+    }
+
+    .zone{
+        margin: 2px;
+    }
 }
