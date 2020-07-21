@@ -10,20 +10,20 @@
             <header>
                 <h1>GrandPy Bot 👴 Le papy qui sait tout!</h1>
             </header>
-            <section>
+            <div id="section">
                 <div id="container"><!-- will contain all answers and google'smap --></div>
                 <div class="zone"><!-- will contain the searching menu -->
                     <input id="input" type="text" name="question" placeholder="Pose ta question">
                     <button id="button" type="submit">Envoyer</button>
                     <img id="spinner" src="static/img/spinner.gif" alt="spinner">
                 </div>
-            </section>
+            </div>
             <footer>
                 <p>Copyright 2020 - Gonzalez Tony - P7
                     <a id="href" href="https://github.com/Tony380/Projet7" target="blank">GitHub</a>
                 </p>
             </footer>
-            <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config['API_KEY'] }}"></script>
         </body>
     </html>
