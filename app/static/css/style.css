@@ -102,7 +102,7 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     border-radius: 5px;
 }
 
-@media all and (min-width: 450px) and (max-width: 600px){
+@media screen and (min-width: 450px) and (max-width: 600px){
 
     header{
         font-size: 12px;
@@ -128,7 +128,7 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     }
 }
 
-@media all and (min-width: 300px) and (max-width: 450px){
+@media screen and (min-width: 300px) and (max-width: 450px){
     header{
         font-size: 8px;
         padding: 0px;
