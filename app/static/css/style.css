@@ -58,7 +58,7 @@ button{
     width: 38px;
     border-radius: 45px;
     float: right;
-
+    display: none;
     margin-right: 5px;
 }
 
