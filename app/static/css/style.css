@@ -1,27 +1,47 @@
-body{
+html, body{
     background-color: #008080;
-    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 header{
     margin: 10px;
-    color: #DCDCDC;
-    text-align: center;
+}
+
+section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
 footer{
-    margin: 10px 10px;
-    padding: 1px 0px;
-    height: 52px;
-    text-align: center;
-    color: #DCDCDC;
-    font-size: 17px;
-    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#container{
+    flex: 1;
+    margin: 10px;
+    overflow-y: auto;
 }
 
 .zone{
-    height: 40px;
-    margin: 0px 10px;
+    margin: 10px;
+}
+
+input{
+    background-color: #DCDCDC;
+    font-size: 18px;
+    height: 34px;
+    width: 70%;
+    outline: none;
+    float: left;
 }
 
 button{
@@ -40,20 +60,6 @@ button{
     float: right;
     display: none;
     margin-right: 5px;
-}
-
-input{
-    background-color: #DCDCDC;
-    font-size: 18px;
-    height: 34px;
-    width: 70%;
-    outline: none;
-}
-
-#container{
-    margin: 10px;
-    height: 420px;
-    overflow-y: auto;
 }
 
 a{
@@ -97,51 +103,4 @@ a{
 header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
     border: 1px solid black;
     border-radius: 5px;
-}
-
-@media screen and (max-width: 600px){
-
-    header{
-        font-size: 12px;
-        padding: 12px 0px;
-    }
-
-    input{
-        font-size: 15px;
-        height: 34px;
-    }
-
-    button{
-        font-size: 15px;
-        height: 40px;
-        width: 70px;
-    }
-}
-
-@media screen and (max-width: 450px){
-    header{
-        font-size: 8px;
-        padding: 14px 0px;
-    }
-
-    footer{
-        font-size: 14px;
-        padding-top: 10px;
-    }
-
-    input{
-        font-size: 12px;
-        width: 60%;
-    }
-
-    #img{
-        height: 30px;
-        width: 30px
-    }
-
-    button{
-        font-size: 10px;
-        height: 36px;
-        width: 50px;
-    }
 }
