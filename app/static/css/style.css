@@ -1,5 +1,5 @@
 html, body{
-    background-image: linear-gradient(#000080, #008080);
+    background-image: linear-gradient(#008080, #3CB371);
     height: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -69,7 +69,7 @@ a{
 }
 
 #href{
-    color: #6495ED
+    color: #4B0082;
 }
 
 #map{
