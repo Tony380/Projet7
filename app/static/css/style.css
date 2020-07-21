@@ -10,16 +10,13 @@ header{
 }
 
 footer{
-    margin: 0px 10px;
+    margin: 10px 10px;
+    padding: 1px 0px;
     height: 52px;
     text-align: center;
     color: #DCDCDC;
     font-size: 17px;
     font-weight: bold;
-}
-
-section{
-    height: 475px;
 }
 
 .zone{
@@ -55,7 +52,7 @@ input{
 
 #container{
     margin: 10px;
-    height: 86%;
+    height: 420px;
     overflow-y: auto;
 }
 
@@ -106,10 +103,7 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
 
     header{
         font-size: 12px;
-    }
-
-    footer{
-        margin-top: 30px;
+        padding: 12px 0px;
     }
 
     input{
@@ -122,27 +116,21 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
         height: 40px;
         width: 70px;
     }
-
-    #container{
-        height: 92%;
-    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 450px){
     header{
         font-size: 8px;
-        padding: 0px;
+        padding: 14px 0px;
     }
 
     footer{
-        margin-top: 40px;
         font-size: 14px;
-        padding-top: 7px;
+        padding-top: 10px;
     }
 
     input{
         font-size: 12px;
-        height: 30px;
         width: 60%;
     }
 
@@ -155,9 +143,5 @@ header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
         font-size: 10px;
         height: 36px;
         width: 50px;
-    }
-
-    #container{
-        height: 95%;
     }
 }
