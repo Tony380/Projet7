@@ -22,4 +22,4 @@ dont la valeur sera votre clé API.
 ## L'application en ligne
 Cette application est aussi utilisable en ligne.
 
-Elle est hébergée sur [Heroku](https://grandpybot2020.herokuapp.com/ "Grandpy Bot").
+Elle est hébergée sur Heroku et utilisable [ici](https://grandpybot2020.herokuapp.com/ "Grandpy Bot").
