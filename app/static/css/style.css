@@ -97,12 +97,11 @@ a{
     display: table;
     float: right;
     background-color: #00FA9A;
-    margin: 10px 10px 0px 10px;
+    margin: 10px;
     min-height: 18px;
     min-width: 20px;
     padding: 5px;
-    text-align: right;
-    overflow-wrap: break-word;
+    text-align: left;
 }
 
 header, footer, #container, input, button, #input_value, #adress, #wiki, #map{
