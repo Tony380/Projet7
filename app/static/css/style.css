@@ -99,7 +99,7 @@ a{
     background-color: #00FA9A;
     margin: 10px;
     min-height: 18px;
-    min-width: 20px;
+    min-width: 100px;
     padding: 5px;
     text-align: left;
 }
