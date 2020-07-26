@@ -65,7 +65,7 @@ const emptyInput = () => {
     div.innerHTML = "Tu n'as rien saisi...";
 }
 
-const papybot = () => {
+const grandybot = () => {
     /* Main function for displaying answers */
     if (input.value == ""){
         displayInputValue();
@@ -101,12 +101,12 @@ const papybot = () => {
 
 button.addEventListener("click", () => {
     /* In case of click */
-    papybot();
+    grandybot();
 });
 
 input.addEventListener('keyup', (event) => {
     /* In case of using enter's key */
     if (event.key == 'Enter') {
-        papybot();
+        grandybot();
     }
 });
