@@ -33,7 +33,7 @@ def get_response():
         return jsonify(answer)
 
     else:
-        wiki = Wiki(response, gmap['lat'], gmap['lng']).search()
+        wiki = Wiki(response).search()
 
         if wiki == 'no result found':
             answer = {'result': 'no result found',
