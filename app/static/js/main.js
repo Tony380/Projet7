@@ -15,18 +15,18 @@ const displayInputValue = () => {
     setTimeout(function(){ div.scrollIntoView({behavior: "smooth"}); }, 100); // delay scrolling
 }
 
-const displayAdress = (answer) => {
-    /* Display adress from google */
+const displayAddress = (answer) => {
+    /* Display address from google */
     let div1 = document.createElement("div");
-    div1.setAttribute("id", "adress");
+    div1.setAttribute("id", "address");
     container.appendChild(div1);
-    div1.innerHTML = answer['adr'] + answer['adress'];
+    div1.innerHTML = answer['adr'] + answer['address'];
 }
 
 const messageError = (answer) => {
     /* Displayed if no answers are found */
     let div = document.createElement("div");
-    div.setAttribute("id", "adress");
+    div.setAttribute("id", "address");
     container.appendChild(div);
     div.innerHTML = answer['res'];
 }
@@ -60,7 +60,7 @@ const initMap = (lat, lng) => {
 const emptyInput = () => {
     /* Displayed if user validated without writing anything */
     let div = document.createElement("div");
-    div.setAttribute("id", "adress");
+    div.setAttribute("id", "address");
     container.appendChild(div);
     div.innerHTML = "Tu n'as rien saisi...";
 }
@@ -87,7 +87,7 @@ const grandybot = () => {
 
             if (Object.keys(answer).length > 2){
                 displayInputValue();
-                displayAdress(answer);
+                displayAddress(answer);
                 displayWiki(answer);
                 initMap(answer['lat'], answer['lng']);
             }

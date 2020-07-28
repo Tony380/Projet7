@@ -6,10 +6,10 @@ no_result = ["Je n'ai rien trouvé à ce sujet, peux tu préciser?",
              "Je ne sais plus, il faut que tu m'éclaires un peu...",
              "Aucune idée, précise pour voir?"]
 
-adress = ["Ah oui! Je connais bien, voici l'adresse : ",
-          "Bien sûr, l'adresse est : ",
-          "Je me souviens bien de l'adresse : ",
-          "Oui, j'y suis déjà allé, l'adresse c'est : "]
+address = ["Ah oui! Je connais bien, voici l'adresse : ",
+           "Bien sûr, l'adresse est : ",
+           "Je me souviens bien de l'adresse : ",
+           "Oui, j'y suis déjà allé, l'adresse c'est : "]
 
 wiki = ["D'ailleurs, je ne t'ai pas raconté! ",
         "Au fait, je me rapelle! ",
@@ -20,6 +20,6 @@ wiki = ["D'ailleurs, je ne t'ai pas raconté! ",
 def sentence():
     """Return a random sentence"""
     res = random.choice(no_result)
-    adr = random.choice(adress)
+    adr = random.choice(address)
     wik = random.choice(wiki)
     return {'res': res, 'adr': adr, 'wik': wik}
