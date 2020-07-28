@@ -1,4 +1,4 @@
-"""API google map class"""
+"""API google map file"""
 import requests
 from config import API_KEY
 
