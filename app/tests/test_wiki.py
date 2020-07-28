@@ -2,15 +2,21 @@
 from app.program import wiki
 
 question = "louvre"
-result = {'query': {'pageids': ['fake_page_id'], 'pages': {'fake_page_id': {'pageid': 'fake_page_id',
-                                                                            'extract': "fake_page"}}}}
+result = {'query': {
+        'pageids': ['fake_page_id'],
+        'pages': {
+            'fake_page_id': {
+                'pageid': 'fake_page_id',
+                'extract': "fake_page"}
+        }
+    }
+}
 
 link = 'http://fr.wikipedia.org/?curid=fake_page_id'
 
 
 class TestWiki:
-
-
+    """Mocking class"""
     def json(self):
         return result
 

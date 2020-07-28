@@ -18,7 +18,7 @@ response = {
 
 
 class TestApi:
-
+    """Mocking class"""
     def json(self):
         return response
 
