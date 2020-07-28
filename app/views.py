@@ -42,7 +42,7 @@ def get_response():
             return jsonify(answer)
 
         else:
-            answer = {'adress': gmap['adress'],
+            answer = {'address': gmap['address'],
                       'lat': gmap['lat'],
                       'lng': gmap['lng'],
                       'page': wiki['page'],
