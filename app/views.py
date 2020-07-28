@@ -33,7 +33,8 @@ def get_response():
         return jsonify(answer)
 
     else:
-        wiki = Wiki(response).search()
+        street = gmap['street']
+        wiki = Wiki(street).search()
 
         if wiki == 'no result found':
             answer = {'result': 'no result found',

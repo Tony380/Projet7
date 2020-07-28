@@ -18,10 +18,11 @@ class Gmap:
                                self.location + self.key)
 
             result = req.json()
+            short_adress = result['results'][0]['address_components'][1]['long_name']
             adress = result['results'][0]['formatted_address']
             lat = result['results'][0]['geometry']['location']['lat']
             lng = result['results'][0]['geometry']['location']['lng']
-            return {'adress': adress, 'lat': lat, 'lng': lng}
+            return {'adress': adress, 'lat': lat, 'lng': lng, 'street': short_adress}
 
         except IndexError:
             return 'no result found'
