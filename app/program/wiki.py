@@ -12,7 +12,7 @@ class Wiki:
                        'prop': 'extracts',
                        'explaintext': True,
                        'indexpageids': True,
-                       'exsentences': 2,
+                       'exsentences': 3,
                        'gsrlimit': 1,
                        'gsrsearch': self.question,
                        'format': 'json'
