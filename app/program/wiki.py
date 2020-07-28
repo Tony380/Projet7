@@ -15,6 +15,7 @@ class Wiki:
                        'exsentences': 3,
                        'gsrlimit': 1,
                        'gsrsearch': self.question,
+                       'exsectionformat': 'plain',
                        'format': 'json'
                        }
 
