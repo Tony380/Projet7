@@ -24,5 +24,10 @@ Cette application est aussi utilisable en ligne.
 
 Elle est hébergée sur Heroku et utilisable [ici](https://grandpybot2020.herokuapp.com/ "Grandpy Bot").
 
+
+***Update post parcours:***
+
+***J'ai désactivé la clé API de Google Map. L'application n'accomplit donc plus sa fonction.***
+
 ## Information complétaire
 Le tableau Trello relatif à ce projet se trouve [ici](https://trello.com/b/EgMK9SG8/projet-7 "Tableau Trello").
